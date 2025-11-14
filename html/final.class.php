@@ -1,4 +1,4 @@
-<?php 
+<?php
 class final_rest
 {
 
@@ -69,7 +69,7 @@ class final_rest
 	 *              "status":0,
 	 *              "message": ""
 	 *              "result": [
-	 *                { 
+	 *                {
 	 *                  levelID: 1,
 	 *                  description: "",
 	 *                  prompt: ""
@@ -122,7 +122,7 @@ class final_rest
 	 *     }
 	 *
 	 */
-	public static function addLog ($request, $weather1, $weather2, $openai) 
+	public static function addLog ($request, $weather1, $weather2, $openai)
 	{
 		try {
 				EXEC_SQL("insert into transactions (request, weather1, weather2, openai) values(?, ?, ?, ?)", $request, $weather1, $weather2, $openai);
@@ -136,7 +136,7 @@ class final_rest
 
 		return json_encode ($retData);
 	}
-  
+
 
 	/**
 	 * @api  /api/v1/getLog/
@@ -155,7 +155,7 @@ class final_rest
 	 *              "status":0,
 	 *              "message": ""
 	 *              "result": [
-	 *                { 
+	 *                {
 	 *                  timeStamp: "YYYY-MM-DD HH:MM:SS",
 	 *                  level: "",
 	 *                  systemPrompt: "",
